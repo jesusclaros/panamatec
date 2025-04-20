@@ -1,0 +1,22 @@
+# Establece manejo automático de texto (EOL cross-platform)
+* text=auto
+
+# Forzar LF (Unix-style) para archivos de código
+*.php text eol=lf
+*.js  text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Tratar archivos como binarios para evitar conflictos innecesarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.webp binary
+
+# Diffs más legibles para código y textos
+*.php diff
+*.js  diff
+*.css diff
+*.json diff
+*.md  diff=markdown
