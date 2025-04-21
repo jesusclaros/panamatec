@@ -54,4 +54,4 @@ Administradores: Acceden a la pantalla de administración para gestionar e ingre
 
 5. Despues de agregar los productos puede proceder al pago y finalizar la compra.
 
-## Capturas de Pantalla 
+## Imagenes demostrativas o de guia 
