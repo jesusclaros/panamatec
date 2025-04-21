@@ -7,7 +7,7 @@
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Uso](#uso)
 - [Guía para el usuario](#guía-para-el-usuario)
-- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Imagenes demostrativas o de guia](#imagenes-demostrativas-o-de-guia)
 
 ## Descripción
 
