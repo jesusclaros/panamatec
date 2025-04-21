@@ -178,18 +178,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://hpstorecuador.com/cdn/shop/files/HP_240_G74_grande.jpg?v=1726169254">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Lptop Hp Probook 450 G10</a>
+                                <a class="h3 text-decoration-none">Lptop Hp Probook 450 G10</a>
                                 <p class="text-center mb-0">$299.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -198,18 +194,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://electroimport.com.pa/wp-content/uploads/2024/09/Computadoras-Laptops-HP-A2CJ7LTABM-507713-XBQMwzgAqbAZu1ia.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Laptop HP ProBook 445 G11</a>
+                                <a class="h3 text-decoration-none">Laptop HP ProBook 445 G11</a>
                                 <p class="text-center mb-0">$399.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 

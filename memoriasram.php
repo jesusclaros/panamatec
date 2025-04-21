@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -178,18 +178,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://images-cdn.ubuy.co.in/667a246d082ba0379f519297-corsair-vengeance-lpx-32gb-2-x-16gb.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Memoria RAM 32GB Corsair Vengeance LPX</a>
+                                <a class="h3 text-decoration-none">Memoria RAM 32GB Corsair Vengeance LPX</a>
                                 <p class="text-center mb-0">$39.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -198,18 +194,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://diversus.com.mx/wp-content/uploads/2018/01/MEMORIA-DDR4-KINGSTON-HYPERX-FURY-BLACK-8GB-2133-MHZ-HX421C14FB22F8.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Memoria RAM 8GB kingston Fury</a>
+                                <a class="h3 text-decoration-none">Memoria RAM 8GB kingston Fury</a>
                                 <p class="text-center mb-0">$24.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 

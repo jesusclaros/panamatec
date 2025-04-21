@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>

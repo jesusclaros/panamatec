@@ -166,6 +166,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -176,8 +177,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en
-                                    uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -197,21 +196,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://www.officedepot.com.pa/medias/31359.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MTgyOTM3fGltYWdlL2pwZWd8YURoa0wyaGhOUzg1T1RFd05qazBOek01T1RrNExtcHdad3xiMzdjZTJiNjM1ZTk2NzFlOTNhZmQ5YTczZThhN2E3ZTBlZDljZDI1ZmUyZDg5ZWVkZTYzOWYyOTA1ZGI5OWZl">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Raton Razer DeathAdder
-                                    Elite</a>
-                                <p class="text-center mb-0">$24.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder
-                                    Elite" data-precio="15">Agregar al carrito</button>
+                            <a class="h3 text-decoration-none">Logitech G502 HERO</a>
+                                <p class="text-center mb-0">$44.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Logitech G502 HERO" data-precio="44.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -220,21 +212,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://media.ldlc.com/r1600/ld/products/00/04/03/92/LD0004039202_2.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Raton Razer DeathAdder
-                                    Elite</a>
+                                <a class="h3 text-decoration-none">Raton Razer DeathAdder Elite</a>
                                 <p class="text-center mb-0">$24.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder
-                                    Elite" data-precio="15">Agregar al carrito</button>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
                 </div>

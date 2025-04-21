@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -178,19 +178,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://tiendasarcadia.com/wp-content/uploads/2022/02/HEADSET-RAZER-BLACKSHARK-V2PRO-INALAMBRICO-RZ04-03220100-R3U1-600x450.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Auriculares Razer Blackshark
-                                    V2PRO</a>
+                                <a class="h3 text-decoration-none">Auriculares Razer Blackshark V2PRO</a>
                                 <p class="text-center mb-0">$249.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Auriculares Razer Blackshark V2PRO" data-precio="249.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -199,17 +194,12 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://www.cdmarket.com.ar/image/0/600_750-5534-product-626989cc4b686-810056141530-1.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Auriculares Razer Kraken V3 X</a>
+                                <a class="h3 text-decoration-none">Auriculares Razer Kraken V3 X</a>
                                 <p class="text-center mb-0">$59.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Auriculares Razer Kraken V3 X" data-precio="59.99">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>

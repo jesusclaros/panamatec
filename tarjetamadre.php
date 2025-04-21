@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -178,19 +178,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://www.yoytec.com/web/image/product.template/48880/image_1920">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Computadora todo en uno HP
-                                    24-cb1023la</a>
+                                <a class="h3 text-decoration-none">Computadora todo en uno HP 24-cb1023la</a>
                                 <p class="text-center mb-0">$399.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -199,18 +194,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://promart.vteximg.com.br/arquivos/ids/7395592-1000-1000/image-f819678cd31143c3800bd8944e4c2704.jpg?v=638264360498300000s">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Computadora todo en uno Hp Eliteone 440 G9</a>
+                                <a  class="h3 text-decoration-none">Computadora todo en uno Hp Eliteone 440 G9</a>
                                 <p class="text-center mb-0">$399.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 

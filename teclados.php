@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -171,24 +171,21 @@
                         <a class="h3 text-dark text-decoration-none mr-3" style="text-align: center;">PRODUCTOS</a>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://pcbox.vtexassets.com/arquivos/ids/2605781/RZ03-04681800-R3M1_IMG_DEF.jpg?v=638676943387170000">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Teclado Razer Blackwidow V4 Pro</a>
+                                <a class="h3 text-decoration-none">Teclado Razer Blackwidow V4 Pro</a>
                                 <p class="text-center mb-0">$229.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Teclado Razer Blackwidow V4 Pro" data-precio="229.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -197,38 +194,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://corporativo.tecnoplaza.com.co/wp-content/uploads/2020/03/Teclado-gamer-Logitech-G8151-600x450.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
                                 <a href="shop-single.html" class="h3 text-decoration-none">Teclado Gamer Mecánico Logitech G815</a>
                                 <p class="text-center mb-0">$99.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Teclado Gamer Mecánico Logitech G815" data-precio="99.99">Agregar al carrito</button>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://d1gb7gicmr8iau.cloudfront.net/fit-in/600x450/Media/Images/Product/Top/24882_pictures_product_top_1.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Teclado Trust Gaming GXT 867 Acira Mecánico 60%</a>
-                                <p class="text-center mb-0">$34.99</p>
-                            </div>
                         </div>
                     </div>
 

@@ -148,6 +148,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -158,7 +159,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -178,18 +178,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://uk.store.asus.com/media/catalog/product/3/8/389153da0a2aec0c8b2311611640819a_1.jpg?width=1000&height=450&store=en_UK&image-type=image">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Tarjeta de video Asus GTX 1650 4GB</a>
+                                <a class="h3 text-decoration-none">Tarjeta de video Asus GTX 1650 4GB</a>
                                 <p class="text-center mb-0">$199.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -198,18 +194,14 @@
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
                                     src="https://www.mugen.crkaizen.com/wp-content/uploads/2024/10/1024-8.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Tarjeta de video MSI GEFORCE RTX 3050</a>
+                                <a class="h3 text-decoration-none">Tarjeta de video MSI GEFORCE RTX 3050</a>
                                 <p class="text-center mb-0">$249.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
