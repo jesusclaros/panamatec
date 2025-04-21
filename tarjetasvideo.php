@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="apple-touch-icon" href="assets/img/panamatec_icono.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -17,11 +17,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop -->
 
 </head>
 
@@ -52,11 +47,11 @@ https://templatemo.com/tm-559-zay-shop -->
     </nav>
     <!-- Cierre del Top Nav -->
 
-    <!-- Encabezado -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+<!-- Encabezado -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
                 Panamatec
             </a>
 
@@ -71,13 +66,7 @@ https://templatemo.com/tm-559-zay-shop -->
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">Acerca de nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tienda.html">Tienda</a>
+                            <a class="nav-link" href="index.php">Inicio</a>
                         </li>
                     </ul>
                 </div>
@@ -134,33 +123,20 @@ https://templatemo.com/tm-559-zay-shop -->
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-
+            <!-- Inicio del menu de categorias -->
             <div class="col-lg-3">
                 <h1 class="h2 pb-4">CATEGORIAS</h1>
                 <ul class="list-unstyled templatemo-accordion">
 
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Accesorios
+                            Accesorios de computadoras
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li>
-                                <a href="javascript:void(0)"
-                                    class="text-decoration-none d-flex justify-content-between align-items-center"
-                                    data-bs-toggle="collapse" data-bs-target="#subAccesorios" aria-expanded="false"
-                                    aria-controls="subAccesorios">
-                                    Accesorios de computadoras
-                                    <i class="fa fa-chevron-down"></i>
-                                </a>
-
-                                <ul class="collapse list-unstyled ps-3" id="subAccesorios">
-                                    <li><a class="text-decoration-none" href="ratones.html">Ratón</a></li>
-                                    <li><a class="text-decoration-none" href="#">Teclado</a></li>
-                                    <li><a class="text-decoration-none" href="#">Auriculares</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="text-decoration-none" href="#">Realidad virtual</a></li>
+                            <li><a class="text-decoration-none" href="ratones.php">Ratón</a></li>
+                            <li><a class="text-decoration-none" href="teclados.php">Teclado</a></li>
+                            <li><a class="text-decoration-none" href="auriculares.php">Auriculares</a></li>
                         </ul>
                     </li>
 
@@ -170,8 +146,8 @@ https://templatemo.com/tm-559-zay-shop -->
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Memorias RAM</a></li>
-                            <li><a class="text-decoration-none" href="#">Tarjetas de video</a></li>
+                            <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
+                            <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
                         </ul>
                     </li>
 
@@ -181,42 +157,21 @@ https://templatemo.com/tm-559-zay-shop -->
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="#">Computadoras todo en uno</a></li>
+                            <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
+                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
-                    
                 </ul>
             </div>
+            <!-- Fin del menu de categorias -->
 
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-md-12" style="text-align: center;">
-                        <a class="h3 text-dark text-decoration-none mr-3" style="text-align: center;">PRODUCTOS
-                            DESTACADOS</a>
+                        <a class="h3 text-dark text-decoration-none mr-3" style="text-align: center;">PRODUCTOS</a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://images-cdn.ubuy.co.in/667a246d082ba0379f519297-corsair-vengeance-lpx-32gb-2-x-16gb.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Corsair Vengeance LPX 32GB
-                                    RAM</a>
-                                <p class="text-center mb-0">$39.99</p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
@@ -232,7 +187,7 @@ https://templatemo.com/tm-559-zay-shop -->
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Asus GTX 1650 4GB GDDR5</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Tarjeta de video Asus GTX 1650 4GB</a>
                                 <p class="text-center mb-0">$199.99</p>
                             </div>
                         </div>
@@ -242,7 +197,7 @@ https://templatemo.com/tm-559-zay-shop -->
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://hpstorecuador.com/cdn/shop/files/HP_240_G74_grande.jpg?v=1726169254">
+                                    src="https://www.mugen.crkaizen.com/wp-content/uploads/2024/10/1024-8.png">
                                 <div
                                     class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
@@ -252,71 +207,8 @@ https://templatemo.com/tm-559-zay-shop -->
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Lptop Hp Probook 450</a>
-                                <p class="text-center mb-0">$299.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://www.yoytec.com/web/image/product.template/48880/image_1920">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Computadora Todo en Uno HP
-                                    24-cb1023la</a>
-                                <p class="text-center mb-0">$399.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://lh3.googleusercontent.com/proxy/UHBZSrKuou7nEl9Iw3z24iC5af3HxAWdIm__BbEBoJwjwUC_IEWKq3yDUXobM-w271VcWewNQs7uzH0">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oculus Quest All in one VR
-                                    Gaming Headset 64GB</a>
-                                <p class="text-center mb-0">$299.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://tiendasarcadia.com/wp-content/uploads/2022/02/HEADSET-RAZER-BLACKSHARK-V2PRO-INALAMBRICO-RZ04-03220100-R3U1-600x450.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Headset Razer Blackshark
-                                    V2PRO</a>
-                                <p class="text-center mb-0">$250.00</p>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Tarjeta de video MSI GEFORCE RTX 3050</a>
+                                <p class="text-center mb-0">$249.99</p>
                             </div>
                         </div>
                     </div>

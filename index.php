@@ -76,7 +76,7 @@
                                 <a class="nav-link" href="about.html">Acerca de nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tienda.html">Tienda</a>
+                                <a class="nav-link" href="tienda.php">Tienda</a>
                             </li>
                         </ul>
                     </div>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">AMD Ryzen™ 5 8500G</h1>
+                            <h1 class="h1 text-success"><b>AMD Ryzen™ </b> 5 8500G</h1>
                                 <h3 class="h2">El AMD Ryzen™ 5 8500G es el mejor procesador para computadoras de
                                     escritorio todo en uno con tarjeta gráfica AMD Radeon™ 740M.</h3>
                                 <p>
@@ -208,7 +208,7 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">TUF Z370-PLUS GAMING</h1>
+                            <h1 class="h1 text-success"><b>TUF Z370-PLUS </b> 5 8500G</h1>
                                 <p>
                                     TUF la tarjeta madre para juegos están construidas para sobrevivir y prosperar en
                                     cada campo de batalla. TUF Z370-Plus Gaming es el fundamento perfecto para su
@@ -253,18 +253,17 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="index.html">
-                            <img src="./assets/img/graficadestacado.jpg" class="card-img-top" alt="...">
-                        </a>
+                        <img src="./assets/img/graficadestacado.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-right">$199.99</li>
                             </ul>
-                            <a>ASUS GTX 1650 4GB GDDR5</a>
+                            <a><strong>ASUS GTX 1650 4GB GDDR5</strong></a>
                             <p class="card-text">
-                                <strong>Aspectos Destacados</strong>
+                                Aspectos Destacados
                                 <li>
                                     Marca Chipset: NVIDIA
                                 </li>
@@ -278,7 +277,7 @@
                             </p>
 
                             <p style="text-align: center;">
-                                <a class=text-success href="tienda.html">
+                                <a class=text-success href="tienda.php">
                                     VER EN LA TIENDA
                                 </a>
                             </p>
@@ -286,18 +285,17 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="index.html">
-                            <img src="./assets/img/ramdestacado.jpg" class="card-img-top" alt="...">
-                        </a>
+                        <img src="./assets/img/ramdestacado.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-right">$39.99</li>
                             </ul>
-                            <a>KINGSPEC 32GB RAM</a>
+                            <a><strong>Corsair Vengeance LPX</strong></a>
                             <p class="card-text">
-                                <strong>Aspectos Destacados</strong>
+                                Aspectos Destacados
                                 <li>
                                     32GB RAM
                                 </li>
@@ -311,7 +309,7 @@
                             </p>
 
                             <p style="text-align: center;">
-                                <a class=text-success href="tienda.html">
+                                <a class=text-success href="tienda.php">
                                     VER EN LA TIENDA
                                 </a>
                             </p>
@@ -319,23 +317,22 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="index.html">
-                            <img src="./assets/img/laptopdestacado.jpg" class="card-img-top" alt="...">
-                        </a>
+                        <img src="https://hpstorecuador.com/cdn/shop/files/HP_240_G74_grande.jpg?v=1726169254" class="card-img-top" alt="...">
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-right">$299.99</li>
                             </ul>
-                            <a>LAPTOP UOWAMOU</a>
+                            <a><strong>Laptop Hp Probook 450 G10</strgon></a>
                             <p class="card-text">
-                                <strong>Aspectos Destacados</strong>
+                                Aspectos Destacados
                                 <li>
                                     Pantalla HD 15.6 pulgadas
                                 </li>
                                 <li>
-                                    SSD NVMe 256GB
+                                    Intel core i5-1335U
                                 </li>
                                 <li>
                                     8GB RAM
@@ -344,7 +341,7 @@
                             </p>
 
                             <p style="text-align: center;">
-                                <a class=text-success href="tienda.html">
+                                <a class=text-success href="tienda.php">
                                     VER EN LA TIENDA
                                 </a>
                             </p>

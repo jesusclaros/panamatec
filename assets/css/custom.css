@@ -1,3 +1,10 @@
-/*
-Custom Css
-*/
+    /* Fuerza el color negro para el ícono del carrito */
+    .icono-carrito {
+        color: black !important;
+      }
+  
+      /* Opcional: agrega un pequeño efecto al pasar el mouse */
+      .btn:hover .icono-carrito {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+        }
