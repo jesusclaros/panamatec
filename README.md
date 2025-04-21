@@ -42,16 +42,16 @@ Administradores: Acceden a la pantalla de administración para gestionar e ingre
 
 ## Guía para el usuario
 
-1. 
+1. El cliente al entrar a la página y puede ver un carrusel de productos y los productos destacados.
 
-2. 
+2. Tienes de opciones dar click en dos texto: el "Acerca de nosotros" y acceder a la tienda. 
 
-3. 
+3. Al dar en "Tienda", podrá observar los productos y sus categorias.
+
+    3.1 Al dar click en "Acerca de nosotros", podrá ver la informacion de nuestra mision y vision de Panamatec.
  
-4. 
+4. Puede agregar productos de cualquier categoria al carrito de compra.
 
-5. 
-
-6. 
+5. Despues de agregar los productos puede proceder al pago y finalizar la compra.
 
 ## Capturas de Pantalla 

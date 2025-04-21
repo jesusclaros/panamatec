@@ -94,6 +94,7 @@
                             0
                         </span>
                     </button>
+                    <!-- Fin del carrito -->
 
                     <!-- Usuario -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
@@ -193,9 +194,11 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Raton Logitech G502
-                                    Gaming</a>
-                                <p class="text-center mb-0">$59.99</p>
+                            <a href="shop-single.html" class="h3 text-decoration-none">Raton Razer DeathAdder
+                                    Elite</a>
+                                <p class="text-center mb-0">$24.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder
+                                    Elite" data-precio="15">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
