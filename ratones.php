@@ -18,6 +18,18 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
+    <style>
+            .icono-carrito {
+        color: black !important;
+      }
+  
+      /* Opcional: agrega un pequeño efecto al pasar el mouse */
+      .btn:hover .icono-carrito {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+        }
+    </style>
+
 </head>
 
 <body>
