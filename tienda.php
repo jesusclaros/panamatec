@@ -229,7 +229,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Lptop Hp Probook 450</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Laptop Hp Probook 450</a>
                                 <p class="text-center mb-0">$299.99</p>
                             </div>
                         </div>
