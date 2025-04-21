@@ -44,7 +44,7 @@ Administradores: Acceden a la pantalla de administración para gestionar e ingre
 
 1. El cliente al entrar a la página y puede ver un carrusel de productos y los productos destacados.
 
-2. Tienes de opciones dar click en dos texto: el "Acerca de nosotros" y acceder a la tienda. 
+2. Tienes de opciones dar click en dos textos: el "Acerca de nosotros" y acceder a la tienda. 
 
 3. Al dar en "Tienda", podrá observar los productos y sus categorias.
 
