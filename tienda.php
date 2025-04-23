@@ -83,16 +83,13 @@
                         data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
+
+                    <!-- Carrito -->
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                        🛒 Carrito (<span id="contador-carrito">0</span>)
+                    </button>
+                    <!-- Fin del carrito -->
+
                 </div>
             </div>
 
@@ -120,7 +117,7 @@
     <!-- Fin del modal de busqueda -->
 
     <!-- Inicio del contenido -->
-    
+
     <div class="container py-5">
         <div class="row">
             <!-- Inicio del menu de categorias -->
@@ -148,7 +145,7 @@
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="memoriasram.php">Memorias RAM</a></li>
                             <li><a class="text-decoration-none" href="tarjetasvideo.php">Tarjetas de video</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Tarjetas madre</a></li>
+                            <li><a class="text-decoration-none" href="tarjetamadre.php">Tarjetas madre</a></li>
                         </ul>
                     </li>
 
@@ -174,23 +171,33 @@
                 </div>
                 <div class="row">
 
+                <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid"
+                                    src="https://corporativo.tecnoplaza.com.co/wp-content/uploads/2020/03/Teclado-gamer-Logitech-G8151-600x450.jpg">
+                            </div>
+
+                            <div class="card-body">
+                                <a href="shop-single.html" class="h3 text-decoration-none">Teclado Gamer Mecánico Logitech G815</a>
+                                <p class="text-center mb-0">$99.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Teclado Gamer Mecánico Logitech G815" data-precio="99.99">Agregar al carrito</button>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://images-cdn.ubuy.co.in/667a246d082ba0379f519297-corsair-vengeance-lpx-32gb-2-x-16gb.jpg">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
+                                    src="https://www.cdmarket.com.ar/image/0/600_750-5534-product-626989cc4b686-810056141530-1.jpg">
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Corsair Vengeance LPX 32GB
-                                    RAM</a>
-                                <p class="text-center mb-0">$39.99</p>
+                                <a class="h3 text-decoration-none">Auriculares Razer Kraken V3 X</a>
+                                <p class="text-center mb-0">$59.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Auriculares Razer Kraken V3 X" data-precio="59.99">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
@@ -199,19 +206,15 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://uk.store.asus.com/media/catalog/product/3/8/389153da0a2aec0c8b2311611640819a_1.jpg?width=1000&height=450&store=en_UK&image-type=image">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
+                                    src="https://diversus.com.mx/wp-content/uploads/2018/01/MEMORIA-DDR4-KINGSTON-HYPERX-FURY-BLACK-8GB-2133-MHZ-HX421C14FB22F8.png">
                             </div>
+
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Asus GTX 1650 4GB GDDR5</a>
-                                <p class="text-center mb-0">$199.99</p>
+                                <a class="h3 text-decoration-none">Memoria RAM 8GB kingston Fury</a>
+                                <p class="text-center mb-0">$24.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -219,40 +222,15 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://hpstorecuador.com/cdn/shop/files/HP_240_G74_grande.jpg?v=1726169254">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
+                                    src="https://electroimport.com.pa/wp-content/uploads/2024/09/Computadoras-Laptops-HP-A2CJ7LTABM-507713-XBQMwzgAqbAZu1ia.jpg">
                             </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Laptop Hp Probook 450</a>
-                                <p class="text-center mb-0">$299.99</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://www.yoytec.com/web/image/product.template/48880/image_1920">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Computadora Todo en Uno HP
-                                    24-cb1023la</a>
+                                <a class="h3 text-decoration-none">Laptop HP ProBook 445 G11</a>
                                 <p class="text-center mb-0">$399.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
 
@@ -260,43 +238,40 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://lh3.googleusercontent.com/proxy/UHBZSrKuou7nEl9Iw3z24iC5af3HxAWdIm__BbEBoJwjwUC_IEWKq3yDUXobM-w271VcWewNQs7uzH0">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
+                                    src="https://www.mugen.crkaizen.com/wp-content/uploads/2024/10/1024-8.png">
                             </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oculus Quest All in one VR
-                                    Gaming Headset 64GB</a>
-                                <p class="text-center mb-0">$299.99</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid"
-                                    src="https://tiendasarcadia.com/wp-content/uploads/2022/02/HEADSET-RAZER-BLACKSHARK-V2PRO-INALAMBRICO-RZ04-03220100-R3U1-600x450.png">
-                                <div
-                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                                    class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Headset Razer Blackshark
-                                    V2PRO</a>
+                                <a class="h3 text-decoration-none">Tarjeta de video MSI GEFORCE RTX 3050</a>
                                 <p class="text-center mb-0">$249.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
                             </div>
+
                         </div>
                     </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid"
+                                    src="https://www.officedepot.com.pa/medias/31359.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MTgyOTM3fGltYWdlL2pwZWd8YURoa0wyaGhOUzg1T1RFd05qazBOek01T1RrNExtcHdad3xiMzdjZTJiNjM1ZTk2NzFlOTNhZmQ5YTczZThhN2E3ZTBlZDljZDI1ZmUyZDg5ZWVkZTYzOWYyOTA1ZGI5OWZl">
+                            </div>
+
+                            <div class="card-body">
+                            <a class="h3 text-decoration-none">Logitech G502 HERO</a>
+                                <p class="text-center mb-0">$44.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Logitech G502 HERO" data-precio="44.99">Agregar al carrito</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
 
                 </div>
                 <div div="row">
@@ -503,5 +478,118 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+     
+<!-- Inicio del Modal del carrito -->
+<div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="lista-carrito" class="list-group mb-3">
+                    <!-- Productos agregados -->
+                </ul>
+                <h5>Subtotal (sin impuesto): $<span id="subtotal-carrito">0.00</span></h5>
+                <h5>Impuesto (7%): $<span id="monto-impuesto">0.00</span></h5>
+                <h5>Total: $<span id="total-carrito">0.00</span></h5>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="eliminar-todo">Vaciar carrito</button>
+                <button class="btn btn-success">Finalizar compra</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Final del modal -->
+
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const contadorCarrito = document.getElementById('contador-carrito');
+    const subtotalCarrito = document.getElementById('subtotal-carrito');
+    const montoImpuesto = document.getElementById('monto-impuesto');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function actualizarCarrito() {
+        listaCarrito.innerHTML = '';
+        let total = 0;
+        let totalProductos = 0;
+
+        carrito.forEach((producto, index) => {
+            total += producto.precio * producto.cantidad;
+            totalProductos += producto.cantidad;
+
+            const item = document.createElement('li');
+            item.className = 'list-group-item d-flex justify-content-between align-items-center';
+            item.innerHTML = `
+                <div class="d-flex flex-column">
+                    <strong>${producto.nombre}</strong>
+                    <small>$${producto.precio.toFixed(2)} c/u</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, -1)">−</button>
+                    <span>${producto.cantidad}</span>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, 1)">+</button>
+                    <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">Eliminar</button>
+                </div>
+            `;
+            listaCarrito.appendChild(item);
+        });
+
+        const montoImpuestoValor = total * 0.07;
+        const totalConImpuesto = total + montoImpuestoValor;
+
+        subtotalCarrito.textContent = total.toFixed(2);
+        montoImpuesto.textContent = montoImpuestoValor.toFixed(2);
+        totalCarrito.textContent = totalConImpuesto.toFixed(2);
+        contadorCarrito.textContent = totalProductos;
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    document.querySelectorAll('.agregar-carrito').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const nombre = boton.getAttribute('data-nombre');
+            const precio = parseFloat(boton.getAttribute('data-precio'));
+
+            const index = carrito.findIndex(p => p.nombre === nombre);
+            if (index !== -1) {
+                carrito[index].cantidad++;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        });
+    });
+
+    window.cambiarCantidad = function(index, cambio) {
+        carrito[index].cantidad += cambio;
+        if (carrito[index].cantidad <= 0) {
+            carrito.splice(index, 1);
+        }
+        actualizarCarrito();
+    }
+
+    window.eliminarProducto = function(index) {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+    }
+
+    document.getElementById('eliminar-todo').addEventListener('click', () => {
+        carrito = [];
+        actualizarCarrito();
+    });
+
+    actualizarCarrito();
+});
+</script>
+
 </body>
+
 </html>

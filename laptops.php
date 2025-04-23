@@ -83,16 +83,13 @@
                         data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
+                    
+                    <!-- Carrito -->
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                         🛒 Carrito (<span id="contador-carrito">0</span>)
+                    </button>
+                    <!-- Fin del carrito -->
+                     
                 </div>
             </div>
 
@@ -158,7 +155,6 @@
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
                             <li><a class="text-decoration-none" href="laptops.php">Laptops</a></li>
-                            <li><a class="text-decoration-none" href="computadorastodoenuno.php">Computadoras todo en uno</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -181,9 +177,9 @@
                             </div>
 
                             <div class="card-body">
-                                <a class="h3 text-decoration-none">Lptop Hp Probook 450 G10</a>
+                                <a class="h3 text-decoration-none">Laptop Hp Probook 450 G10</a>
                                 <p class="text-center mb-0">$299.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Laptop Hp Probook 450 G10" data-precio="299.99">Agregar al carrito</button>
                             </div>
                             
                         </div>
@@ -199,7 +195,7 @@
                             <div class="card-body">
                                 <a class="h3 text-decoration-none">Laptop HP ProBook 445 G11</a>
                                 <p class="text-center mb-0">$399.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Laptop HP ProBook 445 G11" data-precio="399.99">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -410,6 +406,118 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
+<!-- Inicio del Modal del carrito -->
+<div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="lista-carrito" class="list-group mb-3">
+                    <!-- Productos agregados -->
+                </ul>
+                <h5>Subtotal (sin impuesto): $<span id="subtotal-carrito">0.00</span></h5>
+                <h5>Impuesto (7%): $<span id="monto-impuesto">0.00</span></h5>
+                <h5>Total: $<span id="total-carrito">0.00</span></h5>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="eliminar-todo">Vaciar carrito</button>
+                <button class="btn btn-success">Finalizar compra</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Final del modal -->
+
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const contadorCarrito = document.getElementById('contador-carrito');
+    const subtotalCarrito = document.getElementById('subtotal-carrito');
+    const montoImpuesto = document.getElementById('monto-impuesto');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function actualizarCarrito() {
+        listaCarrito.innerHTML = '';
+        let total = 0;
+        let totalProductos = 0;
+
+        carrito.forEach((producto, index) => {
+            total += producto.precio * producto.cantidad;
+            totalProductos += producto.cantidad;
+
+            const item = document.createElement('li');
+            item.className = 'list-group-item d-flex justify-content-between align-items-center';
+            item.innerHTML = `
+                <div class="d-flex flex-column">
+                    <strong>${producto.nombre}</strong>
+                    <small>$${producto.precio.toFixed(2)} c/u</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, -1)">−</button>
+                    <span>${producto.cantidad}</span>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, 1)">+</button>
+                    <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">Eliminar</button>
+                </div>
+            `;
+            listaCarrito.appendChild(item);
+        });
+
+        const montoImpuestoValor = total * 0.07;
+        const totalConImpuesto = total + montoImpuestoValor;
+
+        subtotalCarrito.textContent = total.toFixed(2);
+        montoImpuesto.textContent = montoImpuestoValor.toFixed(2);
+        totalCarrito.textContent = totalConImpuesto.toFixed(2);
+        contadorCarrito.textContent = totalProductos;
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    document.querySelectorAll('.agregar-carrito').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const nombre = boton.getAttribute('data-nombre');
+            const precio = parseFloat(boton.getAttribute('data-precio'));
+
+            const index = carrito.findIndex(p => p.nombre === nombre);
+            if (index !== -1) {
+                carrito[index].cantidad++;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        });
+    });
+
+    window.cambiarCantidad = function(index, cambio) {
+        carrito[index].cantidad += cambio;
+        if (carrito[index].cantidad <= 0) {
+            carrito.splice(index, 1);
+        }
+        actualizarCarrito();
+    }
+
+    window.eliminarProducto = function(index) {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+    }
+
+    document.getElementById('eliminar-todo').addEventListener('click', () => {
+        carrito = [];
+        actualizarCarrito();
+    });
+
+    actualizarCarrito();
+});
+</script>
+
 </body>
 
 </html>

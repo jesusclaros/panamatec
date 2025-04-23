@@ -83,16 +83,13 @@
                         data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
+                    
+                    <!-- Carrito -->
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                         🛒 Carrito (<span id="contador-carrito">0</span>)
+                    </button>
+                    <!-- Fin del carrito -->
+                     
                 </div>
             </div>
 
@@ -177,13 +174,13 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://www.yoytec.com/web/image/product.template/48880/image_1920">
+                                    src="https://asset.msi.com/resize/image/global/product/product_9_20200204103315_5e38d7ebe1b46.png62405b38c58fe0f07fcef2367d8a9ba1/600.png">
                             </div>
 
                             <div class="card-body">
-                                <a class="h3 text-decoration-none">Computadora todo en uno HP 24-cb1023la</a>
-                                <p class="text-center mb-0">$399.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
+                                <a class="h3 text-decoration-none">Tarjeta madre B450 GAMING PRO CARBON</a>
+                                <p class="text-center mb-0">$149.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Tarjeta madre B450 GAMING PRO CARBON" data-precio="149.99">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -193,13 +190,13 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid"
-                                    src="https://promart.vteximg.com.br/arquivos/ids/7395592-1000-1000/image-f819678cd31143c3800bd8944e4c2704.jpg?v=638264360498300000s">
+                                    src="https://tectec.cl/wp-content/uploads/2025/03/Gigabyte-Z790-S-WiFi_1-600x450.jpg">
                             </div>
 
                             <div class="card-body">
-                                <a  class="h3 text-decoration-none">Computadora todo en uno Hp Eliteone 440 G9</a>
-                                <p class="text-center mb-0">$399.99</p>
-                                <button class="btn btn-primary agregar-carrito" data-nombre="Raton Razer DeathAdder Elite" data-precio="24.99">Agregar al carrito</button>
+                                <a  class="h3 text-decoration-none">Tarjeta madre Gigabyte B560 Aorus Pro AX</a>
+                                <p class="text-center mb-0">$99.99</p>
+                                <button class="btn btn-primary agregar-carrito" data-nombre="Tarjeta madre Gigabyte B560 Aorus Pro AX" data-precio="99.99">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -410,6 +407,118 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
+<!-- Inicio del Modal del carrito -->
+<div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="lista-carrito" class="list-group mb-3">
+                    <!-- Productos agregados -->
+                </ul>
+                <h5>Subtotal (sin impuesto): $<span id="subtotal-carrito">0.00</span></h5>
+                <h5>Impuesto (7%): $<span id="monto-impuesto">0.00</span></h5>
+                <h5>Total: $<span id="total-carrito">0.00</span></h5>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="eliminar-todo">Vaciar carrito</button>
+                <button class="btn btn-success">Finalizar compra</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Final del modal -->
+
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const contadorCarrito = document.getElementById('contador-carrito');
+    const subtotalCarrito = document.getElementById('subtotal-carrito');
+    const montoImpuesto = document.getElementById('monto-impuesto');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function actualizarCarrito() {
+        listaCarrito.innerHTML = '';
+        let total = 0;
+        let totalProductos = 0;
+
+        carrito.forEach((producto, index) => {
+            total += producto.precio * producto.cantidad;
+            totalProductos += producto.cantidad;
+
+            const item = document.createElement('li');
+            item.className = 'list-group-item d-flex justify-content-between align-items-center';
+            item.innerHTML = `
+                <div class="d-flex flex-column">
+                    <strong>${producto.nombre}</strong>
+                    <small>$${producto.precio.toFixed(2)} c/u</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, -1)">−</button>
+                    <span>${producto.cantidad}</span>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${index}, 1)">+</button>
+                    <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">Eliminar</button>
+                </div>
+            `;
+            listaCarrito.appendChild(item);
+        });
+
+        const montoImpuestoValor = total * 0.07;
+        const totalConImpuesto = total + montoImpuestoValor;
+
+        subtotalCarrito.textContent = total.toFixed(2);
+        montoImpuesto.textContent = montoImpuestoValor.toFixed(2);
+        totalCarrito.textContent = totalConImpuesto.toFixed(2);
+        contadorCarrito.textContent = totalProductos;
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    document.querySelectorAll('.agregar-carrito').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const nombre = boton.getAttribute('data-nombre');
+            const precio = parseFloat(boton.getAttribute('data-precio'));
+
+            const index = carrito.findIndex(p => p.nombre === nombre);
+            if (index !== -1) {
+                carrito[index].cantidad++;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        });
+    });
+
+    window.cambiarCantidad = function(index, cambio) {
+        carrito[index].cantidad += cambio;
+        if (carrito[index].cantidad <= 0) {
+            carrito.splice(index, 1);
+        }
+        actualizarCarrito();
+    }
+
+    window.eliminarProducto = function(index) {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+    }
+
+    document.getElementById('eliminar-todo').addEventListener('click', () => {
+        carrito = [];
+        actualizarCarrito();
+    });
+
+    actualizarCarrito();
+});
+</script>
+
 </body>
 
 </html>
