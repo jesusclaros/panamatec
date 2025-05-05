@@ -1,0 +1,47 @@
+-- Tabla de categorías
+CREATE TABLE categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    categoria_padre_id INT DEFAULT NULL,  -- Para las subcategorías
+    FOREIGN KEY (categoria_padre_id) REFERENCES categorias(id)  -- Relación con categorías superiores
+);
+
+-- Insertar categorías principales
+INSERT INTO categorias (nombre, descripcion) VALUES
+('Accesorios de Computadora', 'Accesorios para PC'),
+('Componentes de PC', 'Partes y componentes para computadoras'),
+('Computadoras', 'Equipos completos de computadoras');
+
+-- Insertar subcategorías
+INSERT INTO categorias (nombre, descripcion, categoria_padre_id) VALUES
+('Ratones', 'Dispositivos de entrada tipo ratón', 1),
+('Teclados', 'Teclados para computadoras', 1),
+('Auriculares', 'Auriculares y audífonos', 1),
+('Memoria RAM', 'Memoria para equipos', 2),
+('Tarjetas de Video', 'Tarjetas gráficas para computadoras', 2),
+('Tarjeta Madre', 'Placas base de computadoras', 2),
+('Laptops', 'Computadoras portátiles', 3);
+
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10,2) NOT NULL,
+    imagen VARCHAR(255),
+    cantidad INT NOT NULL DEFAULT 0,  -- Nueva columna para manejar el stock
+    categoria_id INT,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+);
+
+
+ESTO ES UN EJEMPLO NO ES NECESARIO INGRESARLOS
+ 
+-- Insertar productos con imágenes como URL
+INSERT INTO productos (nombre, descripcion, precio, imagen, categoria_id) VALUES
+('Ratón Logitech', 'Ratón óptico inalámbrico', 25.99, 'https://tusitio.com/imagenes/raton_logitech.jpg', 4),
+('Teclado Mecánico', 'Teclado mecánico retroiluminado', 49.99, 'https://tusitio.com/imagenes/teclado_mecanico.jpg', 5),
+('Auriculares Bluetooth', 'Auriculares inalámbricos con Bluetooth', 59.99, 'https://tusitio.com/imagenes/auriculares_bluetooth.jpg', 6),
+('Memoria RAM Corsair', 'Memoria RAM DDR4 de 16GB', 89.99, 'https://tusitio.com/imagenes/ram_corsair.jpg', 7),
+('Tarjeta de Video NVIDIA', 'Tarjeta gráfica de 8GB', 399.99, 'https://tusitio.com/imagenes/tarjeta_video_nvidia.jpg', 8),
+('Laptop Dell XPS', 'Laptop portátil de 15 pulgadas', 999.99, 'https://tusitio.com/imagenes/laptop_dell.jpg', 9);

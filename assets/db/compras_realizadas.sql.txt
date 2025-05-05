@@ -1,0 +1,22 @@
+-- Tabla principal de compras
+CREATE TABLE IF NOT EXISTS compra (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_cliente VARCHAR(100) NOT NULL,
+    monto_total DECIMAL(10,2) NOT NULL,
+    itbms DECIMAL(10,2) NOT NULL,
+    fecha_hora DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- (Opcional) Tabla para guardar detalles por producto de cada compra
+CREATE TABLE IF NOT EXISTS detalle_compra (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_compra INT,
+    producto_nombre VARCHAR(100),
+    descripcion TEXT,
+    precio_unitario DECIMAL(10,2),
+    cantidad INT,
+    total_producto DECIMAL(10,2),
+    FOREIGN KEY (id_compra) REFERENCES compra(id)
+);
+
+
