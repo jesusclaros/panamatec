@@ -5,7 +5,7 @@
 - [Descripción](#descripción)
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Uso](#uso)
+- [Uso General](#uso)
 - [Guía para el usuario](#guía-para-el-usuario)
 - [Imagenes demostrativas o de guia](#imagenes-demostrativas-o-de-guia)
 
