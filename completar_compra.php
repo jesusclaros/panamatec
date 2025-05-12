@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 <div class="container mt-5">
-    <h1>Resumen de la compra</h1>
+    <h1>PRODUCTOS DEL CARRITO</h1>
     <table class="table">
         <thead>
             <tr>
@@ -99,48 +99,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p><strong>Total:</strong> $<span id="total"></span></p>
     </div>
 
-    <h3>Formulario de pago</h3>
-    <form method="POST" id="form-pago">
-        <div class="mb-3">
-            <label for="tipo" class="form-label">Tipo de tarjeta:</label>
-            <select name="tipo" id="tipo" class="form-select" required>
-                <option value="credito">Crédito</option>
-                <option value="debito">Débito</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre del titular:</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="numero" class="form-label">Número de tarjeta:</label>
-            <input type="text" name="numero" id="numero" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="fecha" class="form-label">Fecha de expiración (MM/AA):</label>
-            <input type="text" name="fecha" id="fecha" class="form-control" placeholder="MM/AA" required>
-        </div>
-        <div class="mb-3">
-            <label for="cvv" class="form-label">CVV:</label>
-            <input type="text" name="cvv" id="cvv" class="form-control" required>
-        </div>
+    <h3>FORMA DE PAGO</h3>
+<form method="POST" id="form-pago">
+    <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo de tarjeta:</label>
+        <select name="tipo" id="tipo" class="form-select" required>
+            <option value="">Seleccione</option>
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
+        </select>
+    </div>
 
-        <!-- Campos ocultos con totales -->
-        <input type="hidden" name="total" id="totalInput">
-        <input type="hidden" name="impuesto" id="impuestoInput">
-        <input type="hidden" name="productos" id="productosInput"> <!-- Campo oculto para productos -->
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre del titular:</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" required pattern="^[A-Za-zÁÉÍÓÚÑáéíóúñ ]{2,}$" title="Solo letras y espacios." maxlength="50">
+    </div>
 
-        <button type="submit" class="btn btn-success">Realizar pago</button>
-    </form>
-</div>
+    <div class="mb-3">
+        <label for="numero" class="form-label">Número de tarjeta:</label>
+        <input type="text" name="numero" id="numero" class="form-control" required pattern="^\d{16}$" maxlength="16" title="Debe contener 16 dígitos numéricos.">
+    </div>
+
+    <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha de expiración (MM/AA):</label>
+        <input type="text" name="fecha" id="fecha" class="form-control" placeholder="MM/AA" required pattern="^(0[1-9]|1[0-2])\/\d{2}$" title="Formato válido: MM/AA" maxlength="5">
+    </div>
+
+    <div class="mb-3">
+        <label for="cvv" class="form-label">CVV:</label>
+        <input type="text" name="cvv" id="cvv" class="form-control" required pattern="^\d{3,4}$" maxlength="4" title="Debe contener 3 o 4 dígitos.">
+    </div>
+
+    <!-- Campos ocultos -->
+    <input type="hidden" name="total" id="totalInput">
+    <input type="hidden" name="impuesto" id="impuestoInput">
+    <input type="hidden" name="productos" id="productosInput">
+
+    <button type="submit" class="btn btn-success">Realizar pago</button>
+</form>
 
 <script>
+    // Cargar productos desde localStorage y calcular totales (sin cambios)
     const productosComprados = document.getElementById('productos-comprados');
     const subtotalElement = document.getElementById('subtotal');
     const impuestoElement = document.getElementById('impuesto');
     const totalElement = document.getElementById('total');
     const productosInput = document.getElementById('productosInput');
-
     const totalInput = document.getElementById('totalInput');
     const impuestoInput = document.getElementById('impuestoInput');
 
@@ -169,8 +173,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     totalInput.value = total.toFixed(2);
     impuestoInput.value = itbms.toFixed(2);
-    productosInput.value = JSON.stringify(carrito); // Guardar los productos en formato JSON
+    productosInput.value = JSON.stringify(carrito);
+
+    // Validación adicional por JavaScript
+    const form = document.getElementById('form-pago');
+    form.addEventListener('submit', function(e) {
+        const nombre = document.getElementById('nombre').value.trim();
+        const numero = document.getElementById('numero').value;
+        const fecha = document.getElementById('fecha').value;
+        const cvv = document.getElementById('cvv').value;
+
+        const regexNombre = /^[A-Za-zÁÉÍÓÚÑáéíóúñ ]+$/;
+        const regexFecha = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+        if (!regexNombre.test(nombre)) {
+            alert("El nombre solo debe contener letras y espacios.");
+            e.preventDefault();
+        } else if (!/^\d{16}$/.test(numero)) {
+            alert("El número de tarjeta debe tener exactamente 16 dígitos.");
+            e.preventDefault();
+        } else if (!regexFecha.test(fecha)) {
+            alert("La fecha debe tener el formato MM/AA.");
+            e.preventDefault();
+        } else if (!/^\d{3,4}$/.test(cvv)) {
+            alert("El CVV debe tener 3 o 4 dígitos.");
+            e.preventDefault();
+        }
+    });
 </script>
+
+<script>
+    // Permitir solo letras y espacios
+    document.getElementById('nombre').addEventListener('input', function (e) {
+        this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]/g, '');
+    });
+
+    // Solo números en el número de tarjeta
+    document.getElementById('numero').addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 16); // máximo 16 dígitos
+    });
+
+    // Solo números y "/" en la fecha (máx 5 caracteres)
+    document.getElementById('fecha').addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9\/]/g, '').slice(0, 5);
+    });
+
+    // Solo números en CVV (máx 4 dígitos)
+    document.getElementById('cvv').addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 4);
+    });
+</script>
+
 </body>
 </html>
 
